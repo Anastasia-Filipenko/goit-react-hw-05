@@ -1,0 +1,17 @@
+.list {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  flex-wrap: wrap;
+}
+
+.item {
+  width: 200px;
+}
+.img {
+  height: 300px;
+}
+
+.actorName {
+  font-weight: 600;
+}

@@ -1,0 +1,45 @@
+.list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.item {
+  width: 200px;
+  height: 100px;
+  padding: 15px;
+  background-color: #ffa50073;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form {
+  margin-top: 20px;
+  margin-left: 30px;
+}
+
+.input {
+  border-radius: 15px;
+  border: 2px solid orange;
+  height: 30px;
+  width: 300px;
+  padding-left: 15px;
+}
+
+.btn {
+  margin-left: 5px;
+  border-radius: 15px;
+  background-color: rgba(205, 205, 194, 0.612);
+  border: none;
+  height: 30px;
+  width: 80px;
+}
+
+.btn:hover {
+  border: 1px solid black;
+  font-size: 16px;
+}

@@ -1,0 +1,52 @@
+.backLink {
+  width: 110px;
+  height: 50px;
+  background-color: orange;
+  color: black;
+  text-decoration: none;
+  border-radius: 20px;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.backLink:hover {
+  font-size: 20px;
+}
+.container {
+  margin: 20px;
+}
+
+.containerInfo {
+  margin-top: 20px;
+  display: flex;
+}
+
+.img {
+  height: 500px;
+}
+
+.info {
+  margin-left: 20px;
+}
+
+.additional {
+  margin-top: 10px;
+  box-shadow: 0 2px 4px rgba(0.1, 0, 0, 0.5);
+
+  padding: 10px;
+}
+
+.additionalTitle {
+  font-size: 18px;
+}
+.additionalLink {
+  color: black;
+  margin-left: 10px;
+  font-size: 18px;
+}
+
+.additionalLink:hover {
+  color: orange;
+}
