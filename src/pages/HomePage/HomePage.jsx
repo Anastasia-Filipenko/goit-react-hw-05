@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
-import { fetchMovieTrendy } from '../../../api';
-import MovieList from '../../MovieList/MovieList';
+import { fetchMovieTrendy } from '../../api';
+import MovieList from '../../components/MovieList/MovieList';
 import css from '../HomePage/HomePage.module.css';
 
 export default function HomePage() {

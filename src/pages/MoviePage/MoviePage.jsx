@@ -1,9 +1,9 @@
 import { useEffect, useState } from 'react';
 import { useSearchParams } from 'react-router-dom';
-import { fetchMovieSearch } from '../../../api';
-import MovieList from '../../MovieList/MovieList';
-import Loader from '../../Loader/Loader';
-import ErrorMessage from '../../ErrorMessage/ErrorMessage';
+import { fetchMovieSearch } from '../../api';
+import MovieList from '../../components/MovieList/MovieList';
+import Loader from '../../components/Loader/Loader';
+import ErrorMessage from '../../components/ErrorMessage/ErrorMessage';
 import css from '../MoviePage/MoviePage.module.css';
 
 export default function MoviePage() {

@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
-import { fetchMovieById } from '../../../api';
+import { fetchMovieById } from '../../api';
 import {
   Link,
   NavLink,
@@ -7,8 +7,8 @@ import {
   useLocation,
   useParams,
 } from 'react-router-dom';
-import Loader from '../../Loader/Loader';
-import ErrorMessage from '../../ErrorMessage/ErrorMessage';
+import Loader from '../../components/Loader/Loader';
+import ErrorMessage from '../../components/ErrorMessage/ErrorMessage';
 import css from '../MovieDetailsPage/MovieDetailsPage.module.css';
 import { HiChevronLeft } from 'react-icons/hi2';
 
