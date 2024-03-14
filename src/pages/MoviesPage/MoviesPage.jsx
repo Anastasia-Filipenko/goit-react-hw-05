@@ -4,9 +4,9 @@ import { fetchMovieSearch } from '../../api';
 import MovieList from '../../components/MovieList/MovieList';
 import Loader from '../../components/Loader/Loader';
 import ErrorMessage from '../../components/ErrorMessage/ErrorMessage';
-import css from '../MoviePage/MoviePage.module.css';
+import css from '../MoviesPage/MoviesPage.module.css';
 
-export default function MoviePage() {
+export default function MoviesPage() {
   const [movieBySearch, setMovieBySearch] = useState([]);
   const [isLoading, setLoading] = useState(false);
   const [error, setError] = useState(false);
@@ -46,19 +46,14 @@ export default function MoviePage() {
         </button>
       </form>
 
-      <ul className={css.list}>
-        {isLoading && <Loader />}
-        {error && <ErrorMessage />}
+      <div className={css.container}>
+        <ul className={css.list}>
+          {isLoading && <Loader />}
+          {error && <ErrorMessage />}
 
-        {movieBySearch &&
-          movieBySearch.map(films => {
-            return (
-              <li className={css.item} key={films.id}>
-                <MovieList filmTitle={films.title} filmId={films.id} />
-              </li>
-            );
-          })}
-      </ul>
+          <MovieList films={movieBySearch} />
+        </ul>
+      </div>
     </>
   );
 }

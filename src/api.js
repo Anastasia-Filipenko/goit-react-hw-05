@@ -21,7 +21,7 @@ export const fetchMovieTrendy = async () => {
   }
 };
 
-export const fetchMovieById = async ({ movieId }) => {
+export const fetchMovieById = async movieId => {
   try {
     const response = await axios.get(
       `movie/${movieId}?language=en-US`,
@@ -34,7 +34,7 @@ export const fetchMovieById = async ({ movieId }) => {
   }
 };
 
-export const fetchMovieCast = async ({ movieId }) => {
+export const fetchMovieCast = async movieId => {
   try {
     const response = await axios.get(
       `movie/${movieId}/credits?language=en-US`,
@@ -46,7 +46,7 @@ export const fetchMovieCast = async ({ movieId }) => {
   }
 };
 
-export const fetchMovieReviews = async ({ movieId }) => {
+export const fetchMovieReviews = async movieId => {
   try {
     const response = await axios.get(
       `movie/${movieId}/reviews?language=en-US&page=1`,

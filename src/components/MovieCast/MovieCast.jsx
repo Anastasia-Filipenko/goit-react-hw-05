@@ -4,11 +4,12 @@ import { useParams } from 'react-router-dom';
 import Loader from '../Loader/Loader';
 import ErrorMessage from '../ErrorMessage/ErrorMessage';
 import css from '../MovieCast/MovieCast.module.css';
+
 export default function MovieCast() {
-  const [movieCast, setMovieCast] = useState();
+  const [movieCast, setMovieCast] = useState([]);
   const [isLoading, setLoading] = useState(false);
   const [error, setError] = useState(false);
-  const movieId = useParams();
+  const { movieId } = useParams();
 
   useEffect(() => {
     setLoading(true);
@@ -30,7 +31,7 @@ export default function MovieCast() {
       {isLoading && <Loader />}
       {error && <ErrorMessage />}
       <ul className={css.list}>
-        {movieCast &&
+        {movieCast.length > 0 ? (
           movieCast.map(cast => {
             return (
               <li className={css.item} key={cast.id}>
@@ -43,7 +44,10 @@ export default function MovieCast() {
                 <p>Character: {cast.character}</p>
               </li>
             );
-          })}
+          })
+        ) : (
+          <p>We have not found a cast for this movie</p>
+        )}
       </ul>
     </div>
   );

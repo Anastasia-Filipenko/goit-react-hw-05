@@ -23,13 +23,7 @@ export default function HomePage() {
       <h1 className={css.title}>Trending today</h1>
 
       <ul className={css.list}>
-        {trendyFilms.map(films => {
-          return (
-            <li className={css.item} key={films.id}>
-              <MovieList filmTitle={films.title} filmId={films.id} />
-            </li>
-          );
-        })}
+        <MovieList films={trendyFilms} />
       </ul>
     </div>
   );

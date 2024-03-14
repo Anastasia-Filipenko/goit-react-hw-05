@@ -16,13 +16,15 @@ export default function MovieDetailsPage() {
   const [movieById, setMovieById] = useState(null);
   const [isLoading, setLoading] = useState(false);
   const [error, setError] = useState(false);
-  const movieId = useParams();
+
+  const { movieId } = useParams();
 
   const location = useLocation();
   const backLinkRef = useRef(location.state?.from ?? '/movies');
 
   useEffect(() => {
     setLoading(true);
+
     async function getMovieById() {
       try {
         const data = await fetchMovieById(movieId);

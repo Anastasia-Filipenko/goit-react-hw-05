@@ -8,7 +8,7 @@ export default function MovieReviews() {
   const [movieReviews, setMovieReviews] = useState([]);
   const [isLoading, setLoading] = useState(false);
   const [error, setError] = useState(false);
-  const movieId = useParams();
+  const { movieId } = useParams();
 
   useEffect(() => {
     setLoading(true);

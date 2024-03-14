@@ -7,7 +7,7 @@ import { Suspense, lazy } from 'react';
 import Loader from '../Loader/Loader';
 
 const HomePage = lazy(() => import('../../pages/HomePage/HomePage'));
-const MoviePage = lazy(() => import('../../pages/MoviePage/MoviePage'));
+const MoviePage = lazy(() => import('../../pages/MoviesPage/MoviesPage'));
 const NotFoundPage = lazy(() =>
   import('../../pages/NotFoundPage/NotFoundPage')
 );

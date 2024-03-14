@@ -8,3 +8,14 @@
   font-size: 20px;
   font-weight: 500;
 }
+
+.item {
+  width: 200px;
+  height: 100px;
+  padding: 15px;
+  background-color: #ffa50073;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
